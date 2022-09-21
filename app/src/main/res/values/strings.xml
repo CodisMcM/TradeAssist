@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Trade Assist</string>
+    <string name="stock_price">Stock Price:</string>
+    <string name="total_capital">Total Capital:</string>
+    <string name="max_loss">Max Loss(%)</string>
+    <string name="crunch">Crunch the\nNumbers</string>
+    <string name="default_value_0">0.0</string>
+    <string name="default_value_1">1.0</string>
+    <string name="max_share_size">Max Share Size:</string>
+    <string name="default_share_size">0</string>
+    <string name="profit_target">Profit Target:</string>
+    <string name="stop_loss">Stop Loss:</string>
+</resources>

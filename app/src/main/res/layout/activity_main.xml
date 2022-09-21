@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tradeassist.corey.tradeassist.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/layRel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txtTotalCapital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:labelFor="@+id/edtTotalCapital"
+            android:paddingBottom="5dp"
+            android:text="@string/total_capital"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edtTotalCapital"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txtTotalCapital"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@+id/txtTotalCapital"
+            android:ems="10"
+            android:inputType="number|numberDecimal"
+            android:text="@string/default_value_0"
+            app:layout_constraintBottom_toBottomOf="@+id/txtTotalCapital"
+            app:layout_constraintTop_toTopOf="@+id/txtTotalCapital"
+            tools:layout_editor_absoluteX="162dp" />
+
+        <TextView
+            android:id="@+id/txtStockPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/txtTotalCapital"
+            android:layout_below="@+id/txtTotalCapital"
+            android:layout_marginTop="30dp"
+            android:labelFor="@+id/edtStockPrice"
+            android:paddingBottom="5dp"
+            android:text="@string/stock_price"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTotalCapital" />
+
+        <EditText
+            android:id="@+id/edtStockPrice"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txtStockPrice"
+            android:layout_alignStart="@+id/edtTotalCapital"
+            android:ems="10"
+            android:inputType="number|numberDecimal"
+            android:text="@string/default_value_0"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txtStockPrice"
+            app:layout_constraintLeft_toLeftOf="@+id/edtTotalCapital"
+            app:layout_constraintTop_toTopOf="@+id/txtStockPrice" />
+
+        <Button
+            android:id="@+id/btnCrunch"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="20dp"
+            android:onClick="onCrunch"
+            android:text="@string/crunch"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/txtMaxLoss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/edtMaxLoss"
+            android:layout_alignTop="@+id/edtMaxLoss"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="80dp"
+            android:layout_toEndOf="@+id/btnCrunch"
+            android:layout_toStartOf="@+id/edtMaxLoss"
+            android:gravity="bottom|center_horizontal|end"
+            android:labelFor="@+id/edtMaxLoss"
+            android:paddingBottom="10dp"
+            android:text="@string/max_loss"
+            app:layout_constraintBottom_toBottomOf="@+id/btnCrunch"
+            app:layout_constraintTop_toTopOf="@+id/btnCrunch"
+            app:layout_constraintVertical_bias="0.0"
+            tools:layout_editor_absoluteX="252dp" />
+
+        <EditText
+            android:id="@+id/edtMaxLoss"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btnCrunch"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="25dp"
+            android:ems="10"
+            android:gravity="center_vertical|center"
+            android:inputType="number|numberDecimal"
+            android:text="@string/default_value_1"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txtMaxLoss"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtMaxLoss"
+            app:layout_constraintTop_toTopOf="@+id/txtMaxLoss" />
+
+        <TextView
+            android:id="@+id/txtMaxShareSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/txtTotalCapital"
+            android:layout_below="@+id/edtStockPrice"
+            android:layout_marginTop="60dp"
+            android:text="@string/max_share_size"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtSharesValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txtMaxShareSize"
+            android:layout_alignStart="@+id/edtStockPrice"
+            android:text="@string/default_share_size"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtProfitTarget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/txtMaxShareSize"
+            android:layout_below="@+id/txtMaxShareSize"
+            android:layout_marginTop="20dp"
+            android:text="@string/profit_target"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtProfitTargetValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txtProfitTarget"
+            android:layout_alignStart="@+id/txtSharesValue"
+            android:text="@string/default_value_0"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtStopLoss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/txtProfitTarget"
+            android:layout_below="@+id/txtProfitTarget"
+            android:layout_marginTop="20dp"
+            android:text="@string/stop_loss"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtStopLossValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txtStopLoss"
+            android:layout_alignStart="@+id/txtProfitTargetValue"
+            android:text="@string/default_value_0"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
