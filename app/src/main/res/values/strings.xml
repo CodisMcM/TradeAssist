@@ -11,4 +11,5 @@
     <string name="profit_target">Profit Target:</string>
     <string name="stop_loss">Stop Loss:</string>
     <string name="test">Test</string>
+    <string name="update">Update</string>
 </resources>

@@ -126,17 +126,20 @@
             android:layout_alignEnd="@+id/txtTotalCapital"
             android:layout_below="@+id/edtStockPrice"
             android:layout_marginTop="60dp"
+            android:labelFor="@+id/edtMaxShareSize"
             android:text="@string/max_share_size"
             android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/txtSharesValue"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/edtMaxShareSize"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/txtMaxShareSize"
             android:layout_alignStart="@+id/edtStockPrice"
-            android:text="@string/default_share_size"
-            android:textSize="18sp" />
+            android:ems="10"
+            android:inputType="number"
+            android:text="@string/default_value_0"
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/txtProfitTarget"
@@ -144,18 +147,20 @@
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/txtMaxShareSize"
             android:layout_below="@+id/txtMaxShareSize"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
+            android:labelFor="@+id/edtProfitTarget"
             android:text="@string/profit_target"
             android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/txtProfitTargetValue"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/edtProfitTarget"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/txtProfitTarget"
-            android:layout_alignStart="@+id/txtSharesValue"
-            android:text="@string/default_value_0"
-            android:textSize="18sp" />
+            android:layout_alignStart="@+id/edtMaxShareSize"
+            android:ems="10"
+            android:inputType="numberDecimal|numberPassword"
+            android:text="@string/default_value_0" />
 
         <TextView
             android:id="@+id/txtStopLoss"
@@ -163,18 +168,30 @@
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/txtProfitTarget"
             android:layout_below="@+id/txtProfitTarget"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
+            android:labelFor="@+id/edtStopLoss"
             android:text="@string/stop_loss"
             android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/txtStopLossValue"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/edtStopLoss"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/txtStopLoss"
-            android:layout_alignStart="@+id/txtProfitTargetValue"
-            android:text="@string/default_value_0"
-            android:textSize="18sp" />
+            android:layout_alignStart="@+id/edtProfitTarget"
+            android:ems="10"
+            android:inputType="number|numberDecimal"
+            android:text="@string/default_value_0" />
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnCrunch"
+            android:layout_alignStart="@+id/btnCrunch"
+            android:layout_marginBottom="30dp"
+            android:onClick="onUpdate"
+            android:text="@string/update" />
 
     </RelativeLayout>
 
